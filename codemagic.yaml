@@ -1,0 +1,22 @@
+workflows:
+  ios-workflow:
+    name: iOS Workflow
+    max_build_duration: 60
+
+    environment:
+      node: 20
+
+    scripts:
+      - npm install
+      - npx cap sync ios
+      - cd ios/App
+      - pod install
+
+    artifacts:
+      - ios/App/build/**/outputs/**/*.ipa
+      - build/ios/ipa/*.ipa
+
+    publishing:
+      email:
+        recipients:
+          - jfs1995@gmail.com
