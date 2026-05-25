@@ -1,0 +1,9 @@
+{
+  "appId": "com.elguardianfiscal.app",
+  "appName": "El Guardian Fiscal",
+  "webDir": "dist",
+  "server": {
+    "url": "https://elguardianfiscal.javierfsantiago.es",
+    "cleartext": false
+  }
+}
