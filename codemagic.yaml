@@ -5,10 +5,14 @@ workflows:
 
     environment:
       node: 22
+      xcode: latest
 
     scripts:
       - npm install
       - npx cap sync ios
+      - xcode-project build-ipa \
+          --workspace ios/App/App.xcworkspace \
+          --scheme App
 
     artifacts:
       - build/ios/ipa/*.ipa
